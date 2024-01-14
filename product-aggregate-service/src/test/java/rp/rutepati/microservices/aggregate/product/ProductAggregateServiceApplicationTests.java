@@ -1,10 +1,10 @@
-package rp.rutepati.microservices.composite.product;
+package rp.rutepati.microservices.aggregate.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductCompositeServiceApplicationTests {
+class ProductAggregateServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

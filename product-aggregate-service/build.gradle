@@ -4,11 +4,15 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
-group = 'rp.rutepati.microservices.composite.product'
+group = 'rp.rutepati.microservices.aggregate.product'
 version = '1.0.0-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
+}
+
+jar {
+	enabled = false
 }
 
 repositories {
@@ -18,6 +22,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation fileTree(dir: '../common-api/build/libs', include: '*.jar')
+	implementation fileTree(dir: '../common-util/build/libs', include: '*.jar')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 }
