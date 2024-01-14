@@ -41,9 +41,9 @@ spring init \
 --type=gradle-project \
 --java-version=17 \
 --packaging=jar \
---name=product-composite-service \
---package-name=rp.rutepati.microservices.composite.product \
---groupId=rp.rutepati.microservices.composite.product \
+--name=product-aggregate-service \
+--package-name=rp.rutepati.microservices.aggregate.product \
+--groupId=rp.rutepati.microservices.aggregate.product \
 --dependencies=actuator,webflux \
 --version=1.0.0-SNAPSHOT \
-product-composite-service
+product-aggregate-service

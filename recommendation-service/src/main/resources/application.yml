@@ -1,4 +1,4 @@
-server.port: 7003
+server.port: 8002
 
 logging:
   level:
