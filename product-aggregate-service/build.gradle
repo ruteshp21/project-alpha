@@ -22,6 +22,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.0.2'
 	implementation fileTree(dir: '../common-api/build/libs', include: '*.jar')
 	implementation fileTree(dir: '../common-util/build/libs', include: '*.jar')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
