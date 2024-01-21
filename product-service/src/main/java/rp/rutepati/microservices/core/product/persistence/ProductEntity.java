@@ -1,2 +1,70 @@
-package rp.rutepati.microservices.core.product.persistence;public class ProductEntity {
+package rp.rutepati.microservices.core.product.persistence;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collation = "products")
+public class ProductEntity {
+
+    @Id
+    private String id;
+
+    @Version
+    private Integer version;
+
+    @Indexed(unique = true)
+    private int productId;
+
+    private String name;
+    private float weight;
+
+    public ProductEntity() {}
+
+    public ProductEntity(int productId, String name, float weight) {
+        this.productId = productId;
+        this.name = name;
+        this.weight = weight;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
 }
